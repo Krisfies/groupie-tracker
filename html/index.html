@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <title>Accueil</title>
+</head>
+
+<body>
+    <div class="NAVBAR-header">
+        <div class="NAVBAR-logo">
+            <h1>CRYPTO TRACKER</h1>
+        </div>
+        <div id="NAVBAR-hamburger-icon" onclick="toggleMobileMenu(this)">
+        </div>
+    </div>
+    <div class="request">
+        <form method="POST" class="POST">
+            <label class="text_input">Entrez le nom d'une cryptomonnaie : </label><br>
+            <div class="barre">
+                <input class="input" type="text" name="UserInput">
+                <input class="submit" type="submit">
+                <div class="données">
+                    {{if and (ne .Name "") (ne .Price "")}}
+                    <div class="Nomprix">
+                        <h1>Nom: {{.Name}}<img src={{.Image}} class="signecrypto"></h1>
+                        <h1>Prix: {{.Price}}$</h1>
+                    </div>
+                    <br>
+                    <h3>Le {{.Name}} a eu une évolution de {{.Interval}}% dans les dernières 24 heures.</h3>
+                    <h3>Aujourd'hui les consommateurs se sentent à {{.Votes_P}}% positifs et à {{.Votes_N}}% négatifs sur l'évolution du {{.Name}}</h3>
+                    {{end}}
+                    {{if and (ne .Name "") (eq .Price "")}}
+                    <div class="Nomprix">
+                        Malheureusement le {{.Name}} ne se trouve pas dans la base de données fournie par l'API de Coingecko.
+                        <br>
+                        Essayez autre chose.
+                    </div>
+                    {{else}}
+                    {{end}}
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="id">
+        <h2>
+            Crypto tendance: {{.Tendance}}
+            <img src={{.Image2}} class="idimg">
+        </h2>
+        &nbsp;&nbsp;
+        <h2>
+            Prix: {{.Price_tendance}}$
+        </h2>
+    </div>
+
+
+    <footer>
+        <div class="footer-all">
+            <div class="footer-ligne"></div>
+            <div class="footer-clean">
+                <div class="footer-container">
+                    <div class="footer-flex">
+                        <div class="footer-option">
+                            <h3>Travaux</h3>
+                            <ul>
+                                <li><a href="#">Recrutement</a></li>
+                                <li><a href="#">Succés d'employés</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-option">
+                            <h3>A propos</h3>
+                            <ul>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Nos partenaires</a></li>
+                                <li><a href="https://github.com/Krisfies">Nos projets</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-localisation">
+                            <div class="footer-option">
+                                <h3>Localisation</h3>
+                                <ul class="footer-map">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2892.982398528131!2d5.430548251187715!3d43.52355976871935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12c98d0b5057bd43%3A0x88b7715d87622590!2sAix%20Ynov%20Campus!5e0!3m2!1sfr!2sfr!4v1643185766918!5m2!1sfr!2sfr"
+                                        width="400" height="200" style="border:0;" allowfullscreen=""
+                                        loading="lazy"></iframe>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-contact">
+                        <input type="text" placeholder="Email" name="mail" required><input type="submit" id='submit'
+                            value='CONTACTEZ-NOUS'>
+                    </div>
+                    <div class="footer-ligne"></div>
+                    <div class="footer-réseaux">
+                        <div class="col-lg-3 item social"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i
+                                    class="fab fa-facebook-square"></i></a><a href="#"><i
+                                    class="fab fa-twitter-square"></i></a>
+                            <p class="footer-copyright">CryptoTracker © 2022</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+body 
+{
+  overflow-x: hidden;
+}
+
+.NAVBAR-header {
+    padding: 0 20px;
+    height: 70px;
+    width: 98.92%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin: -11px;
+    font-family: 'Dongle', sans-serif;
+    font-size: 21px;
+    z-index: 1;
+  }
+
+  .NAVBAR-logo
+  {
+    margin-top: -20px;
+    color: white;
+  }
+  
+  .request
+  {
+    margin-top: 8%;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+  }
+
+  .POST
+  {
+    font-family: 'Dongle', sans-serif;
+    text-align: center;
+  }
+
+  .Userinput 
+  {
+    border: 3px solid black;
+  }
+
+  .input   
+  {
+    font-family: 'Dongle', sans-serif;
+    font-size: 27px;
+  }
+
+  .id
+  {
+    margin-top: 15%;
+    padding-left: 3%;
+    display: flex;
+    font-family: 'Dongle', sans-serif;
+    width: 50%;
+    background-color: rgb(245, 245, 245);
+    border-radius: 45px;
+  }
+
+  .idimg
+  {
+    height: 75%;
+  }
+
+  .submit 
+  {
+    margin-left: -6px;
+    font-family: 'Dongle', sans-serif;
+    font-size: 27px;
+    background-color: antiquewhite;
+  }
+
+  .barre
+  {
+    text-align: center;
+  }
+
+  .signecrypto
+  {
+    width: 32px;
+    margin-left: 5px;
+  }
+
+  .données
+  {
+    background-color: rgb(228, 228, 228);
+    width: 80%;
+    margin: auto;
+    border-radius: 45px;
+    font-family: 'Montserrat', sans-serif;
+    padding: 4%;
+  }
+
+  .Nomprix
+  {
+    margin-left: -5%;
+  }
+
+  label,
+  footer {
+      font-family: sans-serif;
+  }
+  
+  label {
+      font-size: 1rem;
+      padding-right: 10px;
+  }
+  
+  select {
+      font-size: .9rem;
+      padding: 2px 5px;
+  }
+  
+
+  footer 
+  {
+    margin: -10px;
+    z-index: -1;
+    margin-top: 30px
+  }
+  .footer-all
+  {
+    background-color: rgb(34, 34, 34);
+    color: white;
+  }
+  
+  .output {
+      background: center/cover no-repeat url('/media/cc0-images/hamster.jpg');
+      position: relative;
+  }
+
+  .footer-container
+{
+    font-family: 'Varela Round', sans-serif;
+}
+
+.footer-flex 
+{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-option
+{
+    text-align: center;
+}
+
+.footer-clean {
+    padding:50px 0;
+  }
+  
+  .footer-clean h3 {
+    margin-top:0;
+    margin-bottom:12px;
+    font-weight:bold;
+    font-size:16px;
+  }
+  
+  .footer-clean ul {
+    padding:0;
+    list-style:none;
+    line-height:1.6;
+    font-size:14px;
+    margin-bottom:0;
+  }
+  
+  .footer-clean ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.8;
+  }
+  
+  .footer-clean ul a:hover {
+    opacity:1;
+  }
+  
+  .footer-clean .item.social {
+    text-align:right;
+  }
+
+  .footer-map
+  {
+      border: 2px solid;
+  }
+
+  .footer-ligne
+  {
+      border-top: 2px solid rgb(255, 255, 255);
+      width : 100%;
+      margin-top: 40px;
+  }
+
+  .footer-réseaux
+  {
+    margin-top: 20px;
+  }
+
+  .footer-contact
+  {
+    text-align: center;
+    margin-top: -80px;
+  }
+
+  input[type=text], input[type=mail] {
+    padding: 14px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius : 7px 0px 0px 7px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+  padding: 14px 20px;
+  cursor: pointer;
+  border: 1px solid;
+  border-radius : 0px 7px 7px 0px;
+  font-weight: bold;
+}
+
+input[type=submit]:hover {
+  background-color: rgb(255, 246, 246);
+}
+  @media (max-width:692px) {
+    .footer-clean .item {
+
+      padding-bottom:20px;
+    }
+
+    .footer-localisation
+    {
+      margin-top: 50px;
+    }
+  }
+
+  @media (max-width:1400px) {
+    .footer-contact
+  {
+    margin-top: 50px;
+  }
+  }
+  
+    .footer-clean .item.social {
+      text-align:center;
+    }
+    
+  .footer-clean .item.social > a {
+    font-size:24px;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    border:1px solid rgb(255, 255, 255);
+    margin-left:10px;
+    margin-top:22px;
+    color:inherit;
+    opacity:0.75;
+  }
+  
+  .footer-clean .item.social > a:hover {
+    opacity:0.9;
+  }
+
+  
+  .footer-clean .footer-copyright {
+    margin-top:14px;
+    margin-bottom:0;
+    font-size:13px;
+    opacity:0.6;
+  }
